@@ -1,0 +1,54 @@
+services:
+  redmail:
+    container_name: mail-server
+    image: iredmail/mariadb:stable
+    env_file:
+      - ./iredmail/iredmail-docker.conf
+    ports:
+      - 8080:80
+      - 80443:443
+      - 80110:110
+      - 80995:995
+      - 80143:143
+      - 88993:993
+      - 8825:25
+      - 88465:465
+      - 88587:587
+    volumes:
+      - ./iredmail/data/backup-mysql:/var/vmail/backup/mysql
+      - ./iredmail/data/mailboxes:/var/vmail/vmail1
+      - ./iredmail/data/mlmmj:/var/vmail/mlmmj
+      - ./iredmail/data/mlmmj-archive:/var/vmail/mlmmj-archive
+      - ./iredmail/data/imapsieve_copy:/var/vmail/imapsieve_copy
+      - ./iredmail/data/custom:/opt/iredmail/custom
+      - ./iredmail/data/ssl:/opt/iredmail/ssl
+      - ./iredmail/data/mysql:/var/lib/mysql
+      - ./iredmail/data/clamav:/var/lib/clamav
+      - ./iredmail/data/sa_rules:/var/lib/spamassassin
+      - ./iredmail/data/postfix_queue:/var/spool/postfix
+  
+volumes:
+#usando volumes definidos aqui los administra docker y el host no puede acceder a ellos
+#usando el bind_mount de arriba, es una carpeta compartida bidireccional
+  iredmail_backup:
+  # Backup copies
+  iredmail_mailboxes:
+  # All users' mailboxes
+  iredmail_mlmmj:
+  # mailing list data
+  iredmail_mlmmj_archive :   
+  # mailing list archive
+  iredmail_imapsieve_copy:   
+  # Used by Dovecot plugin 'imapsieve'
+  iredmail_custom        :   
+  # custom config files
+  iredmail_ssl           :   
+  # SSL cert/key files
+  iredmail_mysql         :   
+  # MySQL databases
+  iredmail_clamav        :   
+  # ClamAV database
+  iredmail_sa_rules      :   
+  # SpamAssassin rules
+  iredmail_postfix_queue :   
+  # Postfix queues
