@@ -2,18 +2,19 @@ services:
   redmail:
     container_name: mail-server
     image: iredmail/mariadb:stable
+    restart: unless-stopped
     env_file:
       - ./iredmail/iredmail-docker.conf
     ports:
-      - 8080:80
-      - 80443:443
-      - 80110:110
-      - 80995:995
-      - 80143:143
-      - 88993:993
-      - 8825:25
-      - 88465:465
-      - 88587:587
+      - 64880:80
+      - 6443:443
+      - 64110:110
+      - 64995:995
+      - 64143:143
+      - 64993:993
+      - 6425:25
+      - 64465:465
+      - 64587:587
     volumes:
       - ./iredmail/data/backup-mysql:/var/vmail/backup/mysql
       - ./iredmail/data/mailboxes:/var/vmail/vmail1
@@ -26,8 +27,15 @@ services:
       - ./iredmail/data/clamav:/var/lib/clamav
       - ./iredmail/data/sa_rules:/var/lib/spamassassin
       - ./iredmail/data/postfix_queue:/var/spool/postfix
-  
-volumes:
+    networks:
+      proxy:
+        ipv4_address: 192.168.1.33
+      
+networks:
+  proxy:
+    external: true
+      
+# volumes:
 #usando volumes definidos aqui los administra docker y el host no puede acceder a ellos
 #usando el bind_mount de arriba, es una carpeta compartida bidireccional
   iredmail_backup:
