@@ -27,6 +27,8 @@ services:
       - ./iredmail/data/clamav:/var/lib/clamav
       - ./iredmail/data/sa_rules:/var/lib/spamassassin
       - ./iredmail/data/postfix_queue:/var/spool/postfix
+      - "/etc/timezone:/etc/timezone:ro" 
+    
     networks:
       proxy:
         ipv4_address: 192.168.1.33
