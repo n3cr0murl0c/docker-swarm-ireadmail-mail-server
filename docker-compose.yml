@@ -8,13 +8,13 @@ services:
     ports:
       - 64880:80
       - 6443:443
-      - 64110:110
-      - 64995:995
-      - 64143:143
-      - 64993:993
-      - 6425:25
-      - 64465:465
-      - 64587:587
+      - 110:110
+      - 995:995
+      - 143:143
+      - 993:993
+      - 25:25
+      - 465:465
+      - 587:587
     volumes:
       - ./iredmail/data/backup-mysql:/var/vmail/backup/mysql
       - ./iredmail/data/mailboxes:/var/vmail/vmail1
