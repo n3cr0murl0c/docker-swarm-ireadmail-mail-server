@@ -9,11 +9,11 @@ services:
       - 64880:80
       - 6443:443
       - 110:110
-      - 995:995
       - 143:143
-      - 993:993
       - 25:25
-      - 465:465
+      - 995:995 #POP3S
+      - 993:993 #IMAPS
+      - 465:465 #STMPS
       - 587:587
     volumes:
       - ./iredmail/data/backup-mysql:/var/vmail/backup/mysql
