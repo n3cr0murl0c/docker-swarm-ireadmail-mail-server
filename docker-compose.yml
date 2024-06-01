@@ -3,18 +3,21 @@ services:
     container_name: stalwart-mailserver
     image: stalwartlabs/mail-server:latest
     restart: unless-stopped
+    # command: ["certbot", " certonly --webroot -w /var/www/example.com/public_html/ \
+    #      -d example.com -d www.example.com \
+    #      --server 'https://api.buypass.com/acme/directory'"]
     env_file:
       - ./iredmail/iredmail-docker.conf
     ports:
-      - 64880:80 #HTTP
-      - 6443:443 #HTTPS
-      - 110:110 #IMAP
+      - 8080:8080 #HTTP
+      - 443:443 #HTTPS
       - 143:143 #POP3
+      - 110:110 #IMAP4
       - 25:25   #SMTP
       - 995:995 #POP3S
       - 993:993 #IMAPS
       - 465:465 #STMPS
-      - 587:587 
+      - 587:587 #SMTP Submission
       - 4190:4190 
     
     volumes:
@@ -55,3 +58,5 @@ networks:
   # # SpamAssassin rules
   # iredmail_postfix_queue :   
   # # Postfix queues
+
+  
