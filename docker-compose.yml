@@ -10,7 +10,7 @@ services:
       - ./iredmail/iredmail-docker.conf
     ports:
       - 8080:8080 #HTTP
-      - 443:443 #HTTPS
+      - 6443:443 #HTTPS
       - 143:143 #POP3
       - 110:110 #IMAP4
       - 25:25   #SMTP
