@@ -186,6 +186,8 @@ networks:
       driver: default
       config:
         - subnet: 100.100.0.0/24
+        - ip_range: 100.100.0.0/24
+        - gateway: 100.100.0.1
   radicale:
     driver: bridge
   proxy:
