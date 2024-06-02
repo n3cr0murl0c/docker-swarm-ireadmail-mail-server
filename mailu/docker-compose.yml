@@ -39,9 +39,11 @@ services:
       - 587:587 #SMTP Submission
       
     networks:
-      - default
-      - webmail
-      - radicale
+      default:
+      webmail:
+      radicale:
+      proxy:
+        ipv4_address: 192.168.1.36
     volumes:
       - "/data/certs:/certs"
       - "/data/overrides/nginx:/overrides:ro"
