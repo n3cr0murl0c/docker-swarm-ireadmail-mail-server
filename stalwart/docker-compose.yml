@@ -8,6 +8,8 @@ services:
     #      --server 'https://api.buypass.com/acme/directory'"]
     env_file:
       - ./iredmail/iredmail-docker.conf
+      
+
     ports:
       - 8080:8080 #HTTP
       - 6443:443 #HTTPS

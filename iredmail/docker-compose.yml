@@ -4,7 +4,7 @@ services:
     image: iredmail/mariadb:stable
     restart: unless-stopped
     env_file:
-      - ./iredmail/iredmail-docker.conf
+      - ./iredmail-docker.conf
     ports:
       - 64880:80
       - 6443:443
