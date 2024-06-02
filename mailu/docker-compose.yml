@@ -15,7 +15,7 @@ services:
     depends_on:
       - resolver
     dns:
-      - 100.100.0.254
+      - 192.168.10.254
 
   # Core services
   front:
@@ -50,7 +50,7 @@ services:
     depends_on:
       - resolver
     dns:
-      - 100.100.0.254
+      - 192.168.10.254
 
   resolver:
     container_name: mailu-resolver
@@ -59,7 +59,7 @@ services:
     restart: always
     networks:
       default:
-        ipv4_address: 100.100.0.254
+        ipv4_address: 192.168.10.254
 
   admin:
     container_name: mailu-admin
@@ -77,7 +77,7 @@ services:
       - redis
       - resolver
     dns:
-      - 100.100.0.254
+      - 192.168.10.254
     # networks:
     #   proxy:
     #     ipv4_address: 192.168.1.35
@@ -98,7 +98,7 @@ services:
       - front
       - resolver
     dns:
-      - 100.100.0.254
+      - 192.168.10.254
 
   smtp:
     container_name: mailu-smtp
@@ -116,7 +116,7 @@ services:
       - front
       - resolver
     dns:
-      - 100.100.0.254
+      - 192.168.10.254
 
   # oletools:
   #   container_name: mailu-oletools
@@ -128,7 +128,7 @@ services:
   #   depends_on:
   #     - resolver
   #   dns:
-  #     - 100.100.0.254
+  #     - 192.168.10.254
 
   antispam:
     container_name: mailu-antispam
@@ -152,7 +152,7 @@ services:
       # - oletools
       - resolver
     dns:
-      - 100.100.0.254
+      - 192.168.10.254
 
   # Optional services
 
@@ -185,9 +185,9 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 100.100.0.0/16
-        - ip_range: 100.100.0.0/24
-        - gateway: 100.100.0.1
+        - subnet: 192.168.10.0/24
+        - ip_range: 192.168.10.0/24
+        - gateway: 192.168.10.1
   radicale:
     driver: bridge
   proxy:
