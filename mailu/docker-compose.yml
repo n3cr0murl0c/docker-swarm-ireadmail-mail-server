@@ -185,7 +185,7 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 255.255.0.0/16
+        - subnet: 100.100.0.0/24
   radicale:
     driver: bridge
   proxy:
