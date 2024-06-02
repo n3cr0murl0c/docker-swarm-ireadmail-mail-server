@@ -3,11 +3,11 @@
 # Generated for compose flavor
 
 
+
 services:
 
   # External dependencies
   redis:
-    container_name: mailu-redis-cache
     image: redis:alpine
     restart: always
     volumes:
@@ -19,7 +19,6 @@ services:
 
   # Core services
   front:
-    container_name: mailu-mailserver
     image: ${DOCKER_ORG:-ghcr.io/mailu}/${DOCKER_PREFIX:-}nginx:${MAILU_VERSION:-2.0}
     restart: always
     env_file: mailu.env
@@ -28,32 +27,28 @@ services:
       options:
         tag: mailu-front
     ports:
-      - 8080:80 #HTTP
-      - 6443:443 #HTTPS
-      - 143:143 #POP3
-      - 110:110 #IMAP4
-      - 25:25   #SMTP
-      - 995:995 #POP3S
-      - 993:993 #IMAPS
-      - 465:465 #STMPS
-      - 587:587 #SMTP Submission
-      
+      - "50.116.16.55:80:80"
+      - "50.116.16.55:443:443"
+      - "50.116.16.55:25:25"
+      - "50.116.16.55:465:465"
+      - "50.116.16.55:587:587"
+      - "50.116.16.55:110:110"
+      - "50.116.16.55:995:995"
+      - "50.116.16.55:143:143"
+      - "50.116.16.55:993:993"
     networks:
-      default:
-      webmail:
-      radicale:
-      proxy:
-        ipv4_address: 192.168.1.33
+      - default
+      - webmail
+      - radicale
     volumes:
-      - "/data/certs:/certs"
-      - "/data/overrides/nginx:/overrides:ro"
+      - "/mailu/certs:/certs"
+      - "/mailu/overrides/nginx:/overrides:ro"
     depends_on:
       - resolver
     dns:
       - 100.100.255.254
 
   resolver:
-    container_name: mailu-resolver
     image: ${DOCKER_ORG:-ghcr.io/mailu}/${DOCKER_PREFIX:-}unbound:${MAILU_VERSION:-2.0}
     env_file: mailu.env
     restart: always
@@ -62,7 +57,6 @@ services:
         ipv4_address: 100.100.255.254
 
   admin:
-    container_name: mailu-admin
     image: ${DOCKER_ORG:-ghcr.io/mailu}/${DOCKER_PREFIX:-}admin:${MAILU_VERSION:-2.0}
     restart: always
     env_file: mailu.env
@@ -78,12 +72,8 @@ services:
       - resolver
     dns:
       - 100.100.255.254
-    # networks:
-    #   proxy:
-    #     ipv4_address: 192.168.1.35
 
   imap:
-    container_name: mailu-imap
     image: ${DOCKER_ORG:-ghcr.io/mailu}/${DOCKER_PREFIX:-}dovecot:${MAILU_VERSION:-2.0}
     restart: always
     env_file: mailu.env
@@ -101,7 +91,6 @@ services:
       - 100.100.255.254
 
   smtp:
-    container_name: mailu-smtp
     image: ${DOCKER_ORG:-ghcr.io/mailu}/${DOCKER_PREFIX:-}postfix:${MAILU_VERSION:-2.0}
     restart: always
     env_file: mailu.env
@@ -118,20 +107,8 @@ services:
     dns:
       - 100.100.255.254
 
-  # oletools:
-  #   container_name: mailu-oletools
-  #   image: ${DOCKER_ORG:-ghcr.io/mailu}/${DOCKER_PREFIX:-}oletools:${MAILU_VERSION:-2.0}
-  #   hostname: oletools
-  #   restart: always
-  #   networks:
-  #     - noinet
-  #   depends_on:
-  #     - resolver
-  #   dns:
-  #     - 100.100.255.254
 
   antispam:
-    container_name: mailu-antispam
     image: ${DOCKER_ORG:-ghcr.io/mailu}/${DOCKER_PREFIX:-}rspamd:${MAILU_VERSION:-2.0}
     hostname: antispam
     restart: always
@@ -140,16 +117,12 @@ services:
       driver: journald
       options:
         tag: mailu-antispam
-    networks:
-      - default
-      - noinet
     volumes:
       - "/mailu/filter:/var/lib/rspamd"
       - "/mailu/overrides/rspamd:/overrides:ro"
     depends_on:
       - front
       - redis
-      # - oletools
       - resolver
     dns:
       - 100.100.255.254
@@ -174,8 +147,7 @@ services:
       - "/mailu/webmail:/data"
       - "/mailu/overrides/roundcube:/overrides:ro"
     networks:
-      webmail:
-        
+      - webmail
     depends_on:
       - front
 
@@ -185,14 +157,8 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 100.100.0.0/24
+        - subnet: 100.100.0.0/16
   radicale:
     driver: bridge
-  proxy:
-    external: true
-    
   webmail:
     driver: bridge
-  noinet:
-    driver: bridge
-    internal: true
