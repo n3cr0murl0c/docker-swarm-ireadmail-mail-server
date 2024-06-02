@@ -2,7 +2,6 @@
 # Please read the documentation before attempting any change.
 # Generated for compose flavor
 
-version: '2.2'
 
 services:
 
@@ -176,7 +175,7 @@ services:
       webmail:
 
       proxy:
-        ipv4_address: 192.168.0.34
+        ipv4_address: 192.168.1.34
         
     depends_on:
       - front
