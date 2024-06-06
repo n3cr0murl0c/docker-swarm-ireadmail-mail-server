@@ -52,7 +52,7 @@ services:
       mail-network:
 
   openldapDockerServer:
-    image: osixia/openldapDockerServer:1.5.0
+    image: osixia/openldap:latest
     container_name: mailserver-ldap
     volumes:
       - ./ldap/ldap_db:/var/lib/ldap
