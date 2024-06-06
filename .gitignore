@@ -4,3 +4,7 @@
 **/postfix_queue/*
 **/sa_rules/*
 **/ssl/*
+**/config/*
+**/mail-data/
+**/mail-logs/*
+**/mail-state/*

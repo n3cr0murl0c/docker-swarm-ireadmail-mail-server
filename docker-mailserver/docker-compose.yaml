@@ -16,7 +16,7 @@ services:
     environment:
       - SSL_TYPE=letsencrypt
     volumes:
-      - ./docker-data/certbot/certs/:/etc/letsencrypt
+      - ./dms/certbot/certs/:/etc/letsencrypt
       - ./dms/mail-data/:/var/mail/
       - ./dms/mail-state/:/var/mail-state/
       - ./dms/mail-logs/:/var/log/mail/
