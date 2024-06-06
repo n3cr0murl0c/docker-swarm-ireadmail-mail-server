@@ -17,7 +17,7 @@ services:
       - SSL_TYPE=letsencrypt
       - LDAP_START_TLS=yes
       - ACCOUNT_PROVISIONER=LDAP
-      - LDAP_SERVER_HOST=ldap://openldap
+      - LDAP_SERVER_HOST=ldap://openldapDockerServer
       - LDAP_SEARCH_BASE=dc=ventruetechnologies,dc=com
       - LDAP_BIND_DN=cn=admin,dc=ventruetechnologies,dc=com
       - LDAP_BIND_PW=@nDREE170702
@@ -41,7 +41,7 @@ services:
     stop_grace_period: 1m
     # Uncomment if using `ENABLE_FAIL2BAN=1`:
     depends_on:
-      - openldap
+      - openldapDockerServer
     cap_add:
       - NET_ADMIN
     healthcheck:
@@ -51,8 +51,8 @@ services:
     networks:
       mail-network:
 
-  openldap:
-    image: osixia/openldap:1.5.0
+  openldapDockerServer:
+    image: osixia/openldapDockerServer:1.5.0
     container_name: mailserver-ldap
     volumes:
       - ./ldap/ldap_db:/var/lib/ldap
@@ -68,11 +68,11 @@ services:
     networks:
       mail-network:
 
-  openldap-ui:
+  openldapDockerServer-ui:
     image: wheelybird/ldap-user-manager:v1.5
     container_name: mailserver-ldap-ui
     environment:
-      - LDAP_URI=ldap://openldap
+      - LDAP_URI=ldap://openldapDockerServer
       - LDAP_BASE_DN=dc=ventruetechnologies,dc=com
       - LDAP_REQUIRE_STARTTLS=FALSE
       - LDAP_ADMINS_GROUP=admins
@@ -83,7 +83,7 @@ services:
       - PASSWORD_HASH=SSHA
       - SERVER_HOSTNAME=localhost:18080
     depends_on:
-      - openldap
+      - openldapDockerServer
     ports:
       - 18080:80
       
