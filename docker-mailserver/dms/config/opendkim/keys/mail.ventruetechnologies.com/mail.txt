@@ -1,3 +1,0 @@
-mail._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; "
-	  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhowGHJZV1RJb6z9NeiVSP2R1492m/a27uckZeAlSUuNK9kGC19xyumjDM7wr7JMgpN+dZITRNZNuLJef9Q9RKlFZB1irZCG51UDhuP+IM3HokEa9stO8QjDUZzHHmLRr+Zwjq/KZLb5mEK11XaEjLxYBDm2PAPrjipEkPZ+b63882kjb1wTSq8dKf8rY2NZYT9SGBiunFcRwLi"
-	  "BcYJoRP/eOex+RRmaVamQXTLebQO2M/2BRYzBLao7blxf6R9Q6W+jZ7ic4zOeftVQ+Ip0swXelEzZGU+kuBBdw5olVTg3LVw3Sc89+5F9CtZdmwrpKF4GSCFvvc/xSHjAlFmk5+wIDAQAB" )  ; ----- DKIM key mail for mail.ventruetechnologies.com

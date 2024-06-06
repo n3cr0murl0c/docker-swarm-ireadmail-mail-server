@@ -1,0 +1,6 @@
+dms/config/
+dms/mail-data/
+dms/mail-logs/*
+dms/mail-state/*
+# dms/certbot/certs/*
+# dms/certbot/logs/*
