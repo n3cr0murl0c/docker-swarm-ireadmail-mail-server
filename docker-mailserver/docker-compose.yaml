@@ -58,10 +58,10 @@ services:
       - ./ldap/ldap_db:/var/lib/ldap
       - ./ldap/ldap_config:/etc/ldap/slapd.d
     environment:
-      - LDAP_ORGANISATION=ventruetechnologies.com
+      - LDAP_ORGANISATION="Ventrue Technologies"
       - LDAP_DOMAIN=ventruetechnologies.com
       - LDAP_ADMIN_PASSWORD=@nDREE170702
-      - LDAP_CONFIG_PASSWORD=@nDREE170702
+      - LDAP_CONFIG_PASSWORD=@nDREE1%
       - LDAP_RFC2307BIS_SCHEMA=true
       - LDAP_REMOVE_CONFIG_AFTER_SETUP=true
       - LDAP_TLS_VERIFY_CLIENT=never
@@ -72,7 +72,7 @@ services:
     image: wheelybird/ldap-user-manager:v1.5
     container_name: mailserver-ldap-ui
     environment:
-      - LDAP_URI=ldap://openldapDockerServer
+      - LDAP_URI=ldap://mailserver-ldap
       - LDAP_BASE_DN=dc=ventruetechnologies,dc=com
       - LDAP_REQUIRE_STARTTLS=FALSE
       - LDAP_ADMINS_GROUP=admins
@@ -131,7 +131,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     environment:
       TZ: America/Guayaquil
-      POSTGRES_USER: postgres
+      POSTGRES_USER: www-data
       POSTGRES_PASSWORD: aNDREE170702
       POSTGRES_DB: mailserver-db
 
