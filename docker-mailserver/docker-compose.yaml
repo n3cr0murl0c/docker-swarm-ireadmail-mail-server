@@ -41,7 +41,7 @@ services:
     stop_grace_period: 1m
     # Uncomment if using `ENABLE_FAIL2BAN=1`:
     depends_on:
-      - openladp
+      - openldap
     cap_add:
       - NET_ADMIN
     healthcheck:
