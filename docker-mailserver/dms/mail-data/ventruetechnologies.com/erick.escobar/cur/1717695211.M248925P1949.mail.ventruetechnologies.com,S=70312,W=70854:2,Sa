@@ -1,0 +1,542 @@
+Return-Path: <bounce-2427_HTML-178003029-685055-515005587-1014@bounce.comm.delltechnologies.com>
+Delivered-To: erick.escobar@ventruetechnologies.com
+Received: from mail.ventruetechnologies.com
+	by mail.ventruetechnologies.com with LMTP
+	id WTeiDuvyYWadBwAAXSjj7Q
+	(envelope-from <bounce-2427_HTML-178003029-685055-515005587-1014@bounce.comm.delltechnologies.com>)
+	for <erick.escobar@ventruetechnologies.com>; Thu, 06 Jun 2024 12:33:31 -0500
+Received: from localhost (localhost [127.0.0.1])
+	by mail.ventruetechnologies.com (Postfix) with ESMTP id 2A56C607BC
+	for <erick.escobar@ventruetechnologies.com>; Thu,  6 Jun 2024 12:33:31 -0500 (-05)
+Authentication-Results: mail.ventruetechnologies.com; dmarc=pass (p=reject dis=none) header.from=comm.delltechnologies.com
+Authentication-Results: mail.ventruetechnologies.com;
+	dkim=pass (2048-bit key; unprotected) header.d=comm.delltechnologies.com header.i=DellTechnologies_Partner@comm.delltechnologies.com header.a=rsa-sha256 header.s=10dkim1 header.b=HCjB8P+9;
+	dkim-atps=neutral
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=13.111.163.153; helo=mta2.comm.delltechnologies.com; envelope-from=bounce-2427_html-178003029-685055-515005587-1014@bounce.comm.delltechnologies.com; receiver=ventruetechnologies.com 
+Received: from mta2.comm.delltechnologies.com (mta2.comm.delltechnologies.com [13.111.163.153])
+	by mail.ventruetechnologies.com (Postfix) with ESMTP id D28E8607B7
+	for <erick.escobar@ventruetechnologies.com>; Thu,  6 Jun 2024 12:33:30 -0500 (-05)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=10dkim1; d=comm.delltechnologies.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ List-ID:Message-ID:Content-Type:Content-Transfer-Encoding;
+ i=DellTechnologies_Partner@comm.delltechnologies.com;
+ bh=ZOpFAVTpM0W3bZjcglaSfsIWY+X4eSNCy7VPpoYQKa4=;
+ b=HCjB8P+9YLB7Ge2YsFtJ1b5+np8oS3LNrmWYZAs5eXNkPZLivohPUeQUWRUASTG7D0HB/HtYjB1i
+   n92z8Qm/mnS4UG0xD2EH9SzMCiGKIfj8hBRPdc1C7j631SxooPvaeNbrdjR7oy6aeTNKAbI94GoF
+   TZfnatbhkyf9f3P1kb8bwmY/k2v9HPccgZa6FRanytgqUqpnXA3ORjS8stkvZdAAl0PdHpBQcfi/
+   VHkbLIf5xcRwafjRIikBlzZEUdoq9RXJzfv3qH1hp7Ye3MCPXfQCuQisw0HEaLOpmeF8GU+d/DUR
+   Dzth1xq9UMedhbshbLiKCu61Udc/dcoodOGI6g==
+Received: by mta2.comm.delltechnologies.com id hc7pek2fmd4b for <erick.escobar@ventruetechnologies.com>; Tue, 4 Jun 2024 14:02:18 +0000 (envelope-from <bounce-2427_HTML-178003029-685055-515005587-1014@bounce.comm.delltechnologies.com>)
+From: "Dell Technologies Partner Program" <DellTechnologies_Partner@comm.delltechnologies.com>
+To: <erick.escobar@ventruetechnologies.com>
+Subject: =?UTF-8?B?8J+ThSBBZ2VuZGEgZGUgZW50cmVuYW1pZW50byBleGNsdXNpdmEg?=
+ =?UTF-8?B?cGFyYSBzb2Npb3MgZGUgbmVnb2Npby4=?=
+Date: Tue, 04 Jun 2024 08:02:17 -0600
+List-Unsubscribe: <https://click.comm.delltechnologies.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1MTUwMDU1ODciLCJzIjoiMTc4MDAzMDI5IiwibGlkIjoiMjQyNyIsImoiOiI2ODUwNTUiLCJqYiI6IjEwMTQiLCJkIjoiMTAwMjA5In0.EemghsashGcKHnCBwKU3So2W9uIRi7LrM_MZxati-qg>, <mailto:leave-fd1c167477636b2531492c-fe3115777d64047e751679-fec2127870640178-fe2b117170640478701c77-ff3915707460@leave.comm.delltechnologies.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+List-ID: <100029263.xt.local>
+X-SFMC-Stack: 10
+x-job: 515005587_685055
+Message-ID: <892d6dbf-4f60-4578-96a5-ff131680f9bb@dfw1s10mta1059.xt.local>
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <!--               -->
+     <!--             -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark only">
+    <!--[if gte mso 9]>     <xml>       <o:OfficeDocumentSettings>         <o:AllowPNG/>         <o:PixelsPerInch>96</o:PixelsPerInch>      </o:OfficeDocumentSettings>     </xml>     <![endif]-->
+    <style type="text/css">
+      ReadMsgBody{ width: 100%;}
+      .ExternalClass {width: 100%;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important; font-family:  Arial, sans-serif;}
+      p { margin: 0; font-family:  Arial, sans-serif;}
+      a.buttonstyles {font-family:  arial, sans-serif!important;}
+      table td { border-collapse: collapse;}
+      img {outline:0;}
+      a img {border:none;}
+      @-ms-viewport{ width: device-width;}
+      /*table.backgroundColor {background-color: #EEEEEE;}*/
+      ul {margin-top: 16px;}
+      li {margin-bottom: 8px;}
+      sup {font-size: 0.6em; vertical-align: 0.5em; line-height: 1em;}
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 599px) {
+        .container {width: 100% !important;}
+        .mobile-hidden { display:none !important; }
+        .noBorder {border:0!important;}
+        .bottomBorder {border-bottom:1px solid #c8c9c7;}
+        img { max-width:100% !important; height:auto !important; max-height:auto !important;}
+        /* Monitor for removal
+        .footer { width:auto !important; margin-left:0; }
+        .logo { display:block !important; padding:0 !important; }
+        .header img{max-width:100% !important;height:auto !important; max-height:auto !important;}
+        .photo img { width:100% !important; max-width:100% !important; height:auto !important;}
+        .drop { display:block !important; width: 100% !important; float:left; clear:both;}
+        .footerlogo { display:block !important; width: 100% !important; padding-top:15px; float:left; clear:both;}
+        .nav4, .nav5, .nav6 { display: none !important; }*/
+        .tableBlock {width:100% !important;}
+        .responsive-td {width:100% !important; display:block !important; padding:0 !important; }
+        .fluid {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        center-block {margin-left: auto !important; margin-right: auto !important}
+         /*Center text Mobile*/       
+        .mobile-text-center {
+          text-align: center!important;
+        }
+        /*Start Grid Mobile*/
+        .stack {
+          width: 100% !important;
+          height: auto !important;
+          display: block !important;
+          border: none !important;
+        }
+        .wrap {
+         width: 100% !important;
+         height: auto !important;
+        }
+        .width-auto {
+          width: auto !important;
+        }
+        .align-center {
+          text-align: center !important;
+        }
+        .stack.mobile-ql table {
+          border-bottom: 1px solid #ffffff !important;
+        }
+        .stack.mobile-ql table * {
+          border-bottom: 0 !important;
+        }
+        .mobile-ql .stack {
+          padding: 5px 0 !important;
+        }
+        /*End Grid Mobile*/
+      }
+    </style>
+    <style type="text/css">
+        .innertd .buttonstyles {
+            font-family:  arial, sans-serif !important;
+        }
+    </style>
+    <style type="text/css">
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+    </style>
+    <style type="text/css">
+        table.backgroundColor { background-color: none !important; }
+      
+        .innertd,
+        .innertd a.buttonstyles {
+          font-weight: bold;
+          border-radius: 0px !important;
+          border: 0px solid transparent !important;
+        }
+      
+        @media (prefers-color-scheme: dark) {
+            body.body,
+            .tb_properties { background-color: #000000 !important; color: #eeeeee !important; }
+            
+            /*span { color: #eeeeee !important; }*/
+            
+            .bg-quartz { background-color: #444444 !important; }
+            .bg-quartz * { color: #EEEEEE !important; }
+            .bg-quartz a { color: #80C7FB !important; }
+            
+            .bg-blue-primary-1__dm { background-color: #0D2155 !important; }
+          
+            .bg-green-primary-1__dm { background-color: #244739 !important; }
+            
+            .bg-green-tertiary__dm { background-color: #E4FFD6 !important; }
+           
+            .bg-purple-primary-1__dm { background-color: #2A145A !important; }
+
+            .bg-blue-primary-1__dm .dell-el { background-color: #80C7FB !important; }
+            .bg-green-primary-1__dm .dell-el { background-color: #7BFC76 !important; }
+            .bg-purple-primary-1__dm .dell-el { background-color: #BEAFFF !important; }
+          
+            .txt-white__dm,
+            .txt-white__dm * { color: #FFFFFF !important; }
+            
+            .txt-blue-tertiary__dm,
+            .txt-blue-tertiary__dm * { color: #E5F8FF !important; }
+            
+            .txt-blue-secondary-2__dm,
+            .txt-blue-secondary-2__dm * { color: #80C7FB !important; }
+            
+            .txt-blue-primary-3__dm,
+            .txt-blue-primary-3__dm * { color: #0C32A4 !important; }
+          
+            .txt-green-tertiary__dm,
+            .txt-green-tertiary__dm * { color: #E4FFD6 !important }
+            
+            .txt-green-secondary-5__dm,
+            .txt-green-secondary-5__dm * { color: #9FFF99 !important; }
+          
+            .txt-green-primary-3__dm,
+            .txt-green-primary-3__dm * { color: #247554 !important; }
+          
+            .txt-purple-tertiary__dm,
+            .txt-purple-tertiary__dm * { color: #2A145A !important }
+            
+            .txt-purple-primary-3__dm,
+            .txt-purple-primary-3__dm * { color: #612CB0 !important; }
+          
+            /* TESTING */
+            .cta-btn-blue-primary-1__dm .innertd,
+            .cta-btn-blue-primary-1__dm .buttonstyles { background-color: #0D2155 !important; color: #CBEEFF !important; }
+            
+            /* TESTING */
+            .cta-btn-blue-primary-2__dm .innertd,
+            .cta-btn-blue-primary-2__dm .buttonstyles { background-color: #00227F !important; color: #E5F8FF !important; }
+          
+             /* TESTING */
+            .cta-btn-blue-primary-3__dm .innertd,
+            .cta-btn-blue-primary-3__dm .buttonstyles { background-color: #0C32A4 !important; color: #E5F8FF !important; }
+          
+             /* TESTING */
+            .cta-btn-blue-primary-5__dm .innertd,
+            .cta-btn-blue-primary-5__dm .buttonstyles { background-color: #0672CB !important; color: #FFFFFF !important; }
+          
+            .cta-btn-blue-tertiary__dm .innertd,
+            .cta-btn-blue-tertiary__dm .buttonstyles { background-color: #E5F8FF !important; color: #0D2155 !important; }
+          
+            /* TESTING -- Replace on markup with green-secondary-1 */
+            .cta-btn-green-primary-3__dm .innertd,
+            .cta-btn-green-primary-3__dm .buttonstyles { color: #FFFFFF !important; background-color: #247554 !important; }
+
+            /* TESTING */
+            .cta-btn-green-secondary-1__dm .innertd,
+            .cta-btn-green-secondary-1__dm .buttonstyles { color: #000000 !important; background-color: #349E5F !important; }
+          
+            /* TESTING */
+            .cta-btn-green-secondary-5__dm .innertd,
+            .cta-btn-green-secondary-5__dm .buttonstyles { background-color: #9FFF99 !important; }
+          
+            .cta-btn-green-tertiary__dm .innertd,
+            .cta-btn-green-tertiary__dm .buttonstyles { background-color: #E4FFD6 !important; color: #244739 !important; }
+          
+            .cta-btn-purple-tertiary__dm .innertd,
+            .cta-btn-purple-tertiary__dm .buttonstyles { background-color: #DEDDFF !important; color: #2A145A !important; }     
+            
+            /* TESTING */
+            .cta-btn-purple-secondary-2__dm .innertd,
+            .cta-btn-purple-secondary-2__dm .buttonstyles { color: #000000 !important; background-color: #8E5CEF !important;} 
+          
+            .il-cta-blue-primary-3__dm,
+            .il-cta-blue-primary-3__dm * { color: #0C32A4 !important; }
+          
+            .il-cta-blue-tertiary__dm,
+            .il-cta-blue-tertiary__dm .buttonstyles { color: #E5F8FF !important; }
+            
+            .il-cta-green-secondary-1__dm,
+            .il-cta-green-secondary-1__dm * { color: #000000 !important; background-color: #349E5F !important; }
+          
+            .il-cta-green-tertiary__dm,
+            .il-cta-green-tertiary__dm .buttonstyles { color: #E4FFD6 !important; }
+          
+            .il-cta-purple-primary-3__dm,
+            .il-cta-purple-primary-3__dm * { color: #612CB0 !important; }
+          
+            .il-cta-purple-tertiary__dm,
+            .il-cta-purple-tertiary__dm .buttonstyles { color: #DEDDFF !important; }
+        }
+      </style>
+      <!--[if mso]>       <style type="text/css">           /* Begin Outlook Font Fix */               body, table, td {                  font-family :  Arial, sans-serif;                  line-height : 100%;                  font-size : 15px;                  color : #444444;               }              /* ul {margin-left:50px !important;} */               li {margin-top: 8px !important;}           /* End Outlook Font Fix */           /* Begin Outlook Button Fix */                      .btn-cta-s .innertd { padding: 7px 20px !important; }           .btn-cta-m .innertd { padding: 11px 15px !important; }                      .btn-cta-l .innertd { padding: 11px 20px !important; }            .btn-cta-s .buttonstyles,           .btn-cta-m .buttonstyles,           .btn-cta-l .buttonstyles { padding: 0px !important; border: 0px !important; }           /* END Outlook Button Fix */       </style>     <![endif]-->
+    <style>u ~ div li {margin-bottom: 12px;}</style>
+  </head>
+  <body class="body" bgcolor="#ffffff" text="#444444" style="-webkit-text-size-adjust:none;background-color : #EEEEEE; font-family :  Arial, sans-serif; line-height : 100%; font-size : 15px; color : #444444; padding : 0px; "><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Manténgase actualizado con las sesiones exclusivas para socios del programa y aprenda cómo ganar más con Dell Technologies</div>
+    <div style="font-size:0; line-height:0;"><img src="https://click.comm.delltechnologies.com/open.aspx?ffcb10-fec2127870640178-fe3015767661077c751779-fe2b117170640478701c77-ff3016747763-fe3115777d64047e751679-ff3915707460&d=100209&bmt=0" width="1" height="1" alt=""></div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="backgroundColor">
+      <tr>
+        <td align="center" valign="top">
+          <table border=0 cellpadding=0 cellspacing=0 style="display: none;">
+	<tr>
+		<td style="display: none;">
+			
+			
+		</td>
+	</tr>
+</table>
+<div style="display: none;"></div>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+            <tr>
+              <td>
+                <table class="tb_properties border_style" style="background-color : #FFFFFF; border : 0px solid transparent;font-size : 15px; font-family :  Arial, sans-serif; line-height : 100%; color : #444444; " cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <!-- added padding here -->
+                          <td class="content_padding" style="padding : 0px; ">
+                            <!-- end of comment -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr> <!-- top slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                          <td align="left" valign="top">
+                                            <table cellspacing="0" cellpadding="0" style="width:100%">
+                                              <tbody>
+                                              <tr>
+                                                <td class="responsive-td" valign="top" style="width: 100%;">
+                                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px 20px 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" dir="rtl" style="width: 100%;"><tr><td valign="top" class="responsive-td" dir="ltr" style="width: 25%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px 0px; " class="stylingblock-content-wrapper camarker-inner"><p style="margin: 0px; font-family: arial, sans-serif; font-size: 12px; color: rgb(0, 118, 206); text-align: center;">
+	<a   data-linkto="other" href="https://view.comm.delltechnologies.com/?qs=39e997027b12e9d7d88c96621025987bbc4331f28651c31bdd9f93dbd30f6473ecf22843d9331db19a8618f09f9ba2689d6e368e795fefcdda973a9b895c178447983890f76eb50e4b6513ff12b80c15" style="color:#0076ce;text-decoration:none;" title="View Online">View Online</a></p></td></tr></table></td><td valign="top" class="responsive-td" dir="ltr" style="width: 39%; padding-right: 0px; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper mobile-hidden"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper mobile-hidden camarker-inner"><table style="display: none;" cellspacing="0" cellpadding="0" border="0">
+  <tr><td></td></tr>
+</table></td></tr></table></td><td valign="top" class="responsive-td" dir="ltr" style="width: 36%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 0px 20px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.comm.delltechnologies.com/?qs=7845f8cca339802473ab7082db0119d5076a34e9da90b1cf3d25cbd1bfdb57fa490befbce2386f0d00e2942a933cdb48be5d3d60c45db814db71decb5965c31d" title="Dell Technologies Partner Program Logo"   data-linkto="https://">
+<img src="https://i.dell.com/is/image/DellContent/dt-partnerprogram-blue-1" alt="Dell Technologies Partner Program" height="57" width="199" style="display: block; padding: 0px; text-align: center; height: 57px; width: 199px; border: 0px none transparent;" data-assetid="84766"></a></td></tr></table></td>
+</tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><style type="text/css">
+@media screen and (max-width: 599px) {
+    .mobile-hidden {
+      display: none !important;
+    }
+    .responsive-td {
+      width: 100% !important;
+      display: block !important;
+      padding: 0 !important;
+    }
+  }</style><!--[if (gte mso 9)|(IE)]> <style type="text/css"> .cta-button { padding: 9px 20px 11px !important; } .cta-button a, .cta-button span, .cta-button a span, .cta a, .cta span, .cta a span, a, a span { text-decoration: none !important; } .mso-p-reset { padding-top: 0px !important; padding-right: 0px !important; padding-bottom: 0px !important; padding-left: 0px !important; } </style> <![endif]--><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 600px; width: 100%;" width="600">
+	
+		<tr>
+			<td align="center" background="https://image.comm.delltechnologies.com/lib/fe2b117170640478701c77/m/9/4faa00dc-0259-4f57-93d2-dbf58dce92e8.png" class="wrap" style="background-color:#eeeeee; background-image:url(https://image.comm.delltechnologies.com/lib/fe2b117170640478701c77/m/1/00555167-c2fa-495a-b4b4-b3802e76d820.jpg); background-repeat:no-repeat; background-position:center; background-size: 100% 100% !important; width:600px; height: 250px; font-size: 0; line-height: 0;" valign="middle" width="600">
+				<!--[if (gte mso 9)|(IE)]> <v:image xmlns:v="urn:schemas-microsoft-com:vml" style="display:inline-block; width:600px; height: 220px; border:0; z-index:0;" src="https://image.comm.delltechnologies.com/lib/fe2b117170640478701c77/m/1/00555167-c2fa-495a-b4b4-b3802e76d820.jpg" /> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="display:inline-block; position:absolute; width:600px; height: 215px; border:0; z-index:2;"> <v:fill opacity="0%" color="#ffffff" style="z-index:1;" /> <v:textbox inset="0px,0px,0px,0px" style="v-text-anchor:middle"/> <![endif]--><!--[if (gte mso 9)|(IE)]> <style> .mso-button-px-reset { padding-left: 0px !important; padding-right: 0px !important; } </style> <![endif]--><div style="font-size:0px;">
+					<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrap" role="presentation" style="max-width:600px; width: 100%;" width="600">
+						
+							<tr>
+								<td class="mso-p-reset" style="padding: 30px;">
+									<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="text-align: center;" width="100%">
+										
+											<tr>
+												<td>
+													<!--[if mso]><span style="line-height: 4px;">&nbsp;</span><br/><![endif]--><h1 style="margin: 0; font-family:Arial, Helvetica, sans-serif; padding: 0; color: #FFFFFF; font-size: 60px; text-align: center; mso-line-height-rule:exactly; line-height: 1.2; line-height: 40px; font-weight: normal;">
+														<span style="font-size:34px;"><span style="color:#ffffff;">Agenda de entrenamientos</span></span></h1><p style="margin: 0; font-family:Arial, Helvetica, sans-serif; font-size:18px; mso-line-height-rule:exactly; line-height:22px; font-weight:normal; color:#FFFFFF; padding-top: 8px;">
+														<span style="color:#ffffff;">Mant&eacute;ngase actualizado y posicione las ventajas del portafolio de Dell Technologies como experto de TI.</span></p></td></tr><tr>
+												<td style="padding-top: 20px;">
+													<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrap" role="presentation">
+														
+															<tr>
+																<th class="mso-button-px-reset responsive-td" style="box-sizing:border-box; padding:0 15px;" valign="top">
+																	<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrap" role="presentation" style="width: 150px;" width="150">
+																		
+																			<tr>
+																				<td align="center" class="cta-button" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; mso-line-height-rule:exactly; line-height:16px; font-weight:700; color:#0076ce; letter-spacing:0.03em; background-color:#0076ce;" valign="middle">
+																					<a   data-linkto="https://" href="https://click.comm.delltechnologies.com/?qs=7845f8cca3398024db2a1f3082122ca35e78b59734a6202f112893625cade9e0ca8f330977418266d2efb35e130eb835014edc9b0fd17547a7b3b3a84a0e506f" style="color:#ffffff;text-decoration:none; padding:11px 20px; display:block;" target="_blank" title="Calendario">Calendario &rsaquo;</a></td></tr></table></th></tr></table></td></tr></table></td></tr></table></div><!--[if (gte mso 9)|(IE)]> </v:rect> &nbsp; <![endif]--></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="background-color: #eeeeee;" width="100%" height="10" bgcolor="#eeeeee"></td></tr></table></td></tr></table>
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px; " class="stylingblock-content-wrapper camarker-inner"><p style="color: rgb(0, 118, 206); font-size: 20px; margin: 0px; line-height: 24px; font-family: &quot; arial&quot;, sans-serif; text-align: center;">
+	<b>Program: </b>Office Hour - MyRewards</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 0px 20px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center">
+<img src="https://i.dell.com/is/image/DellContent/getty-1278728777-xps-16-9640-touch-ms700-purple?wid=300&fmt=png-alpha" alt="Program: Office Hour - MyRewards" width="300" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px none transparent;" data-assetid="146494"></td></tr></table></td></tr></table></td>
+<td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 20px 20px; " class="stylingblock-content-wrapper camarker-inner"><p class="mobile-text-center" style="margin: 0; font-family:  arial, sans-serif; font-size: 14px; line-height: 20px; color: #444444; letter-spacing: .02em;">
+	<span style="color:#000000;">Acomp&aacute;&ntilde;anos en este Office Hour dise&ntilde;ado para facilitar tu experiencia con la herramienta de MyRewards, resolver dudas e interactuar con los panelistas.<br>
+	En este Office Hour aprender&aacute;s: C&oacute;mo habilitar a tu compa&ntilde;&iacute;a para ser parte de MyRewards, La importancia de los nuevos roles, c&oacute;mo reclamar puntos, premios y m&aacute;s.</span></p></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #80C7FB; min-width: 100%; " class="stylingblock-content-wrapper"><tr>
+<td style="padding: 11px 20px 12px; " class="stylingblock-content-wrapper camarker-inner"><p class="mobile-text-center" style="margin: 0;font-size:16px; line-height: 20px; font-family: arial, sans-serif;color: #000000">
+	<b><span style="color:#ffffff;">Junio 14</span></b></p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" role="presentation" class="container"><tr><td class="innertd buttonblock" bgcolor="#0672CB" style=" border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; font-weight: bold; text-align: center; background-color: #0672CB;">
+<a target="_blank" class="buttonstyles mobile-text-center" style=" font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: left; text-decoration: none; display: block; font-weight: bold; background-color: #0672CB; border: 0px solid #0672CB; padding: 11px 20px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;" href="https://click.comm.delltechnologies.com/?qs=7845f8cca339802476679081f7e616aa82e215922bb8116c9f8f2ebc92de5132b5c003bc6c777de462b81d9e9d10f6ffe1e89368b6d01202e0804e435e9c4c9c" title="Regístrese ahora"   data-linkto="https://">Reg&iacute;strese ahora &rsaquo;</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="background-color: #eeeeee;" width="100%" height="10" bgcolor="#eeeeee"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px; " class="stylingblock-content-wrapper camarker-inner"><p style="color: rgb(0, 118, 206); font-size: 20px; margin: 0px; line-height: 24px; font-family: &quot; arial&quot;, sans-serif; text-align: center;">
+	<b>Program: </b>Deal Registration</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 0px 20px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center">
+<img src="https://i.dell.com/is/image/DellContent/shutterstock-1126819889-retouched-la9510nt?wid=300&fmt=png-alpha" alt="Program: Deal Registration" width="300" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px none transparent;" data-assetid="166807"></td></tr></table></td></tr></table></td>
+<td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 20px 20px; " class="stylingblock-content-wrapper camarker-inner"><p class="mobile-text-center" style="margin: 0; font-family:  arial, sans-serif; font-size: 14px; line-height: 20px; color: #444444; letter-spacing: .02em;">
+	<span style="color:#000000;">Si registra sus oportunidades con nosotros, podr&aacute; minimizar los conflictos, sostener la rentabilidad a trav&eacute;s de recompensas financieras y contar con soporte de ventas. En este webcast conocer&aacute; en detalle las nuevas reglas de Registro de Oportunidades para el a&ntilde;o fiscal 25 y responder&aacute; sus preguntas sobre c&oacute;mo administrar, actualizar y renovar oportunidades a trav&eacute;s de la herramienta Casos. &iexcl;Los esperamos!</span><br>
+	<br>
+	<span style="color:#0672cb;">Evento exclusivo para canales T1.</span></p></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #80C7FB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 11px 20px 12px; " class="stylingblock-content-wrapper camarker-inner">
+<p class="mobile-text-center" style="margin: 0;font-size:16px; line-height: 20px; font-family: arial, sans-serif;color: #000000">
+	<b><span style="color:#ffffff;">Junio 19</span></b></p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" role="presentation" class="container"><tr><td class="innertd buttonblock" bgcolor="#0672CB" style=" border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; font-weight: bold; text-align: center; background-color: #0672CB;">
+<a target="_blank" class="buttonstyles mobile-text-center" style=" font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: left; text-decoration: none; display: block; font-weight: bold; background-color: #0672CB; border: 0px solid #0672CB; padding: 11px 20px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;" href="https://click.comm.delltechnologies.com/?qs=7845f8cca33980246c4f2e26903226b047dc9344feef42e1dae192ef194d335be5c31d3c03a8e6c5baa9485ccd4796ddcc7f24aa42cc9496fde9f16816f1bb7e" title="Regístrese ahora"   data-linkto="https://">Reg&iacute;strese ahora &rsaquo;</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="background-color: #eeeeee;" width="100%" height="10" bgcolor="#eeeeee"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px; " class="stylingblock-content-wrapper camarker-inner"><p style="color: rgb(0, 118, 206); font-size: 20px; margin: 0px; line-height: 24px; font-family: &quot; arial&quot;, sans-serif; text-align: center;">
+	<b>Servers: </b>AI &amp; GenAI updated portfolio</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 0px 20px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center">
+<img src="https://i.dell.com/is/image/DellContent/gettyimages-1354126692?wid=300&fmt=png-alpha" alt="Servers: AI &amp; GenAI updated portfolio" width="300" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px none transparent;" data-assetid="166808"></td></tr></table></td></tr></table></td>
+<td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 20px 20px; " class="stylingblock-content-wrapper camarker-inner"><p class="mobile-text-center" style="margin: 0; font-family:  arial, sans-serif; font-size: 14px; line-height: 20px; color: #444444; letter-spacing: .02em;">
+	<span style="color:#000000;">Aprenda todo lo relacionado con el portafolio actualizado de AI y GenAI para este FY25, acomp&aacute;&ntilde;enos a este webcast y conozca c&oacute;mo Dell integra todas las tecnolog&iacute;as para el &eacute;xito de su negocio a trav&eacute;s de la IA.</span></p></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #80C7FB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 11px 20px 12px; " class="stylingblock-content-wrapper camarker-inner"><p class="mobile-text-center" style="margin: 0;font-size:16px; line-height: 20px; font-family: arial, sans-serif;color: #000000">
+	<b><span style="color:#ffffff;">Junio 21</span></b></p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" role="presentation" class="container"><tr><td class="innertd buttonblock" bgcolor="#0672CB" style=" border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; font-weight: bold; text-align: center; background-color: #0672CB;">
+<a target="_blank" class="buttonstyles mobile-text-center" style=" font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: left; text-decoration: none; display: block; font-weight: bold; background-color: #0672CB; border: 0px solid #0672CB; padding: 11px 20px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;" href="https://click.comm.delltechnologies.com/?qs=7845f8cca3398024994c6623c89ad6e7f270ba49f1bc31d40f88e3c099d359ade31df05784c39452cdcc9fd37846e29f29b5fc08f9a3bd7d61e614c5c61fbf64" title="Regístrese ahora"   data-linkto="https://">Reg&iacute;strese ahora &rsaquo;</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="background-color: #eeeeee;" width="100%" height="10" bgcolor="#eeeeee"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px; " class="stylingblock-content-wrapper camarker-inner"><p style="color: rgb(0, 118, 206); font-size: 20px; margin: 0px; line-height: 24px; font-family: &quot; arial&quot;, sans-serif; text-align: center;">
+	<b>Servers: </b>Ofertas extendidas</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 0px 20px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center">
+<img src="https://i.dell.com/is/image/DellContent/14-datacenter2-129?wid=300&fmt=png-alpha" alt="Servers: Ofertas extendidas " width="300" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px none transparent;" data-assetid="166809"></td></tr></table></td></tr></table></td>
+<td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 20px 20px; " class="stylingblock-content-wrapper camarker-inner"><p class="mobile-text-center" style="margin: 0; font-family:  arial, sans-serif; font-size: 14px; line-height: 20px; color: #444444; letter-spacing: .02em;">
+	<span style="color:#000000;">Complete sus soluciones de ISG con ofertas de tecnolog&iacute;a de terceros. El ecosistema de socios tecnol&oacute;gicos de ETC complementa y crea soluciones integradas con los servidores, el almacenamiento y las redes de Dell. Podemos ayudarle a crecer su negocio y brindar soluciones completas a sus clientes.</span></p></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #80C7FB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 11px 20px 12px; " class="stylingblock-content-wrapper camarker-inner"><p class="mobile-text-center" style="margin: 0;font-size:16px; line-height: 20px; font-family: arial, sans-serif;color: #000000">
+	<b><span style="color:#ffffff;">Junio 24</span></b></p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" role="presentation" class="container"><tr><td class="innertd buttonblock" bgcolor="#0672CB" style=" border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; font-weight: bold; text-align: center; background-color: #0672CB;">
+<a target="_blank" class="buttonstyles mobile-text-center" style=" font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: left; text-decoration: none; display: block; font-weight: bold; background-color: #0672CB; border: 0px solid #0672CB; padding: 11px 20px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;" href="https://click.comm.delltechnologies.com/?qs=7845f8cca33980248a8ea6d59ccf868c448e1097a4a2796c090b63ec0bab10a72127f4a4b8ba4aaa3ba87767cd6bee93e5bb8d7776c4fbb089190378fab227f0" title="Regístrese ahora"   data-linkto="https://">Reg&iacute;strese ahora &rsaquo;</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="background-color: #eeeeee;" width="100%" height="10" bgcolor="#eeeeee"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px; " class="stylingblock-content-wrapper camarker-inner"><p style="color: rgb(0, 118, 206); font-size: 20px; margin: 0px; line-height: 24px; font-family: &quot; arial&quot;, sans-serif; text-align: center;">
+	<b>Program: </b>Explora todas las funciones de tu Premier</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FEFEFE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 0px 20px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center">
+<img src="https://i.dell.com/is/image/DellContent/gettyimages-1411654050-lat9510?wid=300&fmt=png-alpha" alt="Program: Explora todas las funciones de tu Premier" width="300" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px none transparent;" data-assetid="166809"></td></tr></table></td></tr></table></td>
+<td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 20px 20px; " class="stylingblock-content-wrapper camarker-inner"><p class="mobile-text-center" style="margin: 0; font-family:  arial, sans-serif; font-size: 14px; line-height: 20px; color: #444444; letter-spacing: .02em;">
+	<span style="color:#000000;">Comprar de manera eficiente en un sitio web personalizable, hecho a la medida y que simplifica la compra de tecnolog&iacute;a nunca ha sido tan f&aacute;cil. &Uacute;nete a este Webcast de Dell en asociaci&oacute;n con Intel y vea lo f&aacute;cil que es navegar por la p&aacute;gina Premier, guardar cotizaciones, realizar pedidos y otros procesos.</span><br>
+	&nbsp;</p><p class="mobile-text-center" style="margin: 0; font-family:  arial, sans-serif; font-size: 14px; line-height: 20px; color: #444444; letter-spacing: .02em;">
+	<span style="color:#0672cb;">Evento exclusivo para Canales T1 con acceso a Premier.</span></p></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #80C7FB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 11px 20px 12px; " class="stylingblock-content-wrapper camarker-inner">
+<p class="mobile-text-center" style="margin: 0;font-size:16px; line-height: 20px; font-family: arial, sans-serif;color: #000000">
+	<b><span style="color:#ffffff;">Junio 26</span></b></p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #0672CB; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left"><table border="0" cellspacing="0" cellpadding="0" role="presentation" class="container"><tr><td class="innertd buttonblock" bgcolor="#0672CB" style=" border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; font-weight: bold; text-align: center; background-color: #0672CB;">
+<a target="_blank" class="buttonstyles mobile-text-center" style=" font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: left; text-decoration: none; display: block; font-weight: bold; background-color: #0672CB; border: 0px solid #0672CB; padding: 11px 20px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;" href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf62583cf444e8c2f2ae48dcbda94d7e64a9d632349ac7e8cee9480c2b191c226f3a70ab317c5455a999261f83b56b73b041480f154f188770c0" title="Regístrese ahora"   data-linkto="https://">Reg&iacute;strese ahora &rsaquo;</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #EEEEEE; min-width: 100%; " class="stylingblock-content-wrapper"><tr>
+<td style="padding: 30px 5px 15px 20px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 60%; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 15px; " class="stylingblock-content-wrapper camarker-inner"><style type="text/css">
+table.socialshare-innertable td {padding: 0 5px!important;}</style><p class="mobile-text-center" style="margin: 0px; color: rgb(68, 68, 68); line-height: 15px; font-family: arial, sans-serif; font-size: 12px;">
+	<span style="color: rgb(0, 0, 0);">Comun&iacute;quese con nosotros:</span></p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 10%; padding-left: 3px; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf624d3dad938082abf5ea0070cccff6466eed490c59907dc32a456a9d3dbe22d385ba7984cbe6093ec52b06ca83cc562620cf24e89ed7932608" title="Follow us on LinkedIn"   data-linkto="https://">
+<img src="https://image.comm.delltechnologies.com/lib/fe2c117170640478701c76/m/14/d4b03bed-cea7-4c25-8851-b1913c993631.png" alt="Follow us on Linkedin" height="25" width="25" style="display: block; padding: 0px; text-align: center; height: 25px; width: 25px; border: 0px;"></a></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #EEEEEE; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 3px 0px 8px; " class="stylingblock-content-wrapper camarker-inner"><p style="font-family: &quot; arial&quot;, sans-serif; font-size: 9px; line-height: 12px; background-color: #EEEEEE; margin: 0px; text-align: center;">
+ LinkedIn</p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 10%; padding-left: 3px; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf6276c68c6ea9543a46d387f9c125fe25a27462fa2f202ff4a02350f69ff3714f25e5a48ef2f80ed335a3e213571e1b1fb4ae702593b6e26336" title="Follow us on Twitter"   data-linkto="https://"><img data-assetid="154448" src="https://image.comm.delltechnologies.com/lib/fe2d117170640478701c75/m/1/dc707412-f37f-40c9-87f9-b78419785bd2.png" alt="Follow us on Twitter" height="23" width="23" style="display: block; padding: 0px; text-align: center; height: 23px; width: 23px; border: 0px;"></a></td></tr></table>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 3px 0px 8px; " class="stylingblock-content-wrapper camarker-inner"><p style="font-family: &quot; arial&quot;, sans-serif; font-size: 9px; line-height: 12px; background-color: #EEEEEE; margin: 0px; text-align: center;">
+	X.com</p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 10%; padding-left: 3px; padding-right: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf624efece00d53f2d9ce1a3c74ef2b79d6b34d53e8c8aa99b76039495ec70be97dbd3fb91c6505d32a36895be79be39005c277c8b97040871bd" title="Subscribe and Listen"   data-linkto="https://"><img src="https://image.comm.delltechnologies.com/lib/fe2b117170640478701c77/m/2/101c37da-c656-4b1c-babf-9399eb673f86.png" alt="Subscribe and Listen" height="25" width="25" style="display: block; padding: 0px; text-align: center; height: 25px; width: 25px; border: 0px;"></a></td></tr></table></td></tr></table>
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 3px 0px 8px; " class="stylingblock-content-wrapper camarker-inner"><p style="font-family: &quot; arial&quot;, sans-serif; font-size: 9px; line-height: 12px; background-color: #EEEEEE; margin: 0px; text-align: center;">
+ Partner<br>
+ Podcast</p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 10%; padding-left: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf629f4f9333460fddbb4dad925675093610a4257d2d293534f05237d5af633ad8b13ba519154fb5b793527990727e2d916f3d9c10b6375d28a6" title="Download the Partner Portal App"   data-linkto="https://"><img src="https://image.comm.delltechnologies.com/lib/fe2b117170640478701c77/m/2/dc9a614a-f39d-43ca-8793-d777a794326f.png" alt="Download the Partner Portal App" height="25" width="25" style="display: block; padding: 0px; text-align: center; height: 25px; width: 25px; border: 0px;"></a></td></tr></table></td></tr></table>
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 3px 0px 8px; " class="stylingblock-content-wrapper camarker-inner"><p style="font-family: &quot; arial&quot;, sans-serif; font-size: 9px; line-height: 12px; background-color: #EEEEEE; margin: 0px; text-align: center;">
+ Mobile<br>
+ App</p></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="background-color: #ffffff;" width="100%" height="10" bgcolor="#ffffff"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FFFFFF; border: 0px; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 20px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%; padding-bottom: 3px;">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 35px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="display:none;">
+ </div><table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" role="presentation" style="background-color: transparent; min-width: 100%" table-layout="auto" width="100%">
+ 
+  <tr>
+   <td class="stylingblock-content-wrapper camarker-inner" style="padding: 0px 0px 15px;">
+    <table cellpadding="0" cellspacing="0" style="width: 100%;" table-layout="auto">
+     
+      <tr>
+       <td>
+        <table cellpadding="0" cellspacing="0" style="width: 100%;" table-layout="auto">
+         
+          <tr>
+           <td class="responsive-td" style="padding-right: 0px;" valign="top">
+            <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" role="presentation" style="min-width: 100%;" width="100%">
+             
+              <tr>
+               <td class="stylingblock-content-wrapper camarker-inner">
+                <table border="0" cellpadding="0" cellspacing="0" style="display: none;" width="100%">
+                 
+                  <tr>
+                   <td width="100%">
+                    https://www.dell.com/preferences/em/Dell TechnologiesOne Dell WayRound RockTX78682</td></tr></table></td></tr></table></td><td class="responsive-td" style="width: 33%; padding-left: 0px; padding-right: 0px;" valign="top">
+            <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" role="presentation" style="min-width: 100%;" width="100%">
+             
+              <tr>
+               <td class="stylingblock-content-wrapper camarker-inner">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                 
+                  <tr>
+                   <td align="center">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                     
+                      <tr>
+                       <td bgcolor="transparent" class="innertd buttonblock" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; background-color: transparent;">
+                        <a   data-linkto="https://" href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf62bd40288aa0c1388502ec1d1556e35eb1812779aa1c9644a1a2a58fc7922bac78a74541efe55779d2c8a1a30a1b0317365029b24fe74a9b28" style="color:#0076ce;text-decoration:none; font-size: 11px; font-family: Arial, helvetica, sans-serif; text-align: center; display: block; background-color: transparent; border: 0px solid transparent; padding: 0px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;" target="_blank" title="Manage Preferences">Manage Preferences</a></td></tr></table></td></tr></table></td></tr></table></td><td class="responsive-td" style="width: 33%; padding-left: 0px; padding-right: 0px;" valign="top">
+            <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper noBorder" role="presentation" style="background-color: transparent; min-width: 100%; border-top: 0px; border-right: 1px solid #c8c9c7; border-bottom: 0px; border-left: 1px solid #c8c9c7;" width="100%">
+             
+              <tr>
+               <td class="stylingblock-content-wrapper camarker-inner" style="padding: 0px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                 
+                  <tr>
+                   <td align="center">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                     
+                      <tr>
+                       <td bgcolor="transparent" class="innertd buttonblock" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; background-color: transparent;">
+                        <a   data-linkto="https://" href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf6281cb4f4ba735cbf55b9617949a3ecc8d38365ac6e9caf62b3aaf6eca08432195db3758e20494986ecb105e9e871513394e054ed7293c1356" style="color:#0076ce;text-decoration:none; font-size: 11px; font-family: Arial, helvetica, sans-serif; text-align: center; display: block; background-color: transparent; border: 0px none; padding: 0px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;" target="_blank" title="Unsubscribe">Unsubscribe</a></td></tr></table></td></tr></table></td></tr></table></td><td class="responsive-td" style="width: 33%; padding-left: 0px; padding-right: 0px;" valign="top">
+            <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" role="presentation" style="min-width: 100%;" width="100%">
+             
+              <tr>
+               <td class="stylingblock-content-wrapper camarker-inner">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                 
+                  <tr>
+                   <td align="center">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                     
+                      <tr>
+                       <td bgcolor="transparent" class="innertd buttonblock" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; background-color: transparent;">
+                        <a   data-linkto="https://" href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf62216c8a0f549e521e2aae1eab7c3db44affc65bd14898349335bf8d4b3a717fb9a752ee0e7bb5d4fb3dd2916f8248219cda821843e4405b11" style="color:#0076ce;text-decoration:none;font-size: 11px; font-family: Arial, helvetica, sans-serif; text-align: center; display: block; background-color: transparent; border: 0px solid transparent; padding: 0px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;" target="_blank" title="Privacy Statement">Privacy Statement</a></td></tr></table></td></tr></table></td></tr></table></td><td class="responsive-td" style="width: 16%; padding-left: 0px;" valign="top">
+            <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper mobile-hidden" role="presentation" style="background-color: transparent; min-width: 100%;" width="100%">
+             
+              <tr>
+               <td class="stylingblock-content-wrapper mobile-hidden camarker-inner" style="padding: 0px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                 
+                  <tr>
+                   <td width="100%">
+                   </td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%; padding-top: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><p style="margin:0; font-family: arial, sans-serif; font-size: 12px; line-height: 16px; color: #444444;">
+	You are subscribed as <a href="mailto:erick.escobar@ventruetechnologies.com" style="text-decoration:none; color: #0076ce">erick.escobar@ventruetechnologies.com</a><br>
+	<br>
+	Dell Technologies Global Headquarters is located at One Dell Way, Round Rock, TX, 78682</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><p style="margin:0; font-family: arial, sans-serif; font-size: 12px; line-height: 16px; color: #444444;">
+	Copyright © 2024 Dell Inc. or its subsidiaries. All Rights Reserved. Dell Technologies, Dell and other trademarks are trademarks of Dell Inc. or its subsidiaries. Other trademarks may be trademarks of their respective owners.</p></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+              
+                                                </td>
+                                              </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+        </td>
+      </tr>
+    </table>
+<style>
+a:link {
+  color: transparent;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: transparent;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: transparent;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: transparent;
+  background-color: transparent;
+  text-decoration: none;
+}
+</style>
+<tr>
+        <td style="display:none;">
+          <a href="https://click.comm.delltechnologies.com/?qs=c1742a7f1a42bf62fdc103e56806d1b2ec01995c171c6a36c593412b9575cdf9aaf5bc9fc6a8ed25d0cafde450736b2af37c59fd24bca6b23e86ccf53a3e1765" ><font color="#ffffff">.</font></a>
+        </td>
+      </tr>
+      <style> @media print{ #_two50 { background-image:url('https://DellSFMC.everestengagement.com/ea/jcCYmAZql4/?t=p&e=178003029&c=ChannelPartner-BiweeklyWebinars-LATAM-ES-WBNR-FY25Q2-Jun04'); } } blockquote #_two50, #mailContainerBody #_two50, div.OutlookMessageHeader, table.moz-email-headers-table { background-image:url('https://DellSFMC.everestengagement.com/ea/jcCYmAZql4/?t=f&e=178003029&c=ChannelPartner-BiweeklyWebinars-LATAM-ES-WBNR-FY25Q2-Jun04'); } </style> <div id='_two50'></div> 
+<img id='_two50_img' src='https://DellSFMC.everestengagement.com/ea/jcCYmAZql4/?e=178003029&c=ChannelPartner-BiweeklyWebinars-LATAM-ES-WBNR-FY25Q2-Jun04' width='1' height='1' style='margin:0 !important; padding:0 !important; border:0 !important; height:1px !important; width:1px !important;' />
+  </body>
+</html>

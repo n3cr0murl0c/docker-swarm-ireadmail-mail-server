@@ -1,0 +1,2 @@
+mail._domainkey.mail.ventruetechnologies.com mail.ventruetechnologies.com:mail:/etc/opendkim/keys/mail.ventruetechnologies.com/mail.private
+mail._domainkey.ventruetechnologies.com ventruetechnologies.com:mail:/etc/opendkim/keys/ventruetechnologies.com/mail.private
