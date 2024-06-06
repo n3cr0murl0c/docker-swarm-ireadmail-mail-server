@@ -13,7 +13,10 @@ services:
       - "465:465"  # ESMTP (implicit TLS)
       - "587:587"  # ESMTP (explicit TLS => STARTTLS)
       - "993:993"  # IMAP4 (implicit TLS)
+    environment:
+      - SSL_TYPE=letsencrypt
     volumes:
+      - ./docker-data/certbot/certs/:/etc/letsencrypt
       - ./dms/mail-data/:/var/mail/
       - ./dms/mail-state/:/var/mail-state/
       - ./dms/mail-logs/:/var/log/mail/
@@ -22,8 +25,8 @@ services:
     restart: unless-stopped
     stop_grace_period: 1m
     # Uncomment if using `ENABLE_FAIL2BAN=1`:
-    # cap_add:
-    #   - NET_ADMIN
+    cap_add:
+      - NET_ADMIN
     healthcheck:
       test: "ss --listening --tcp | grep -P 'LISTEN.+:smtp' || exit 1"
       timeout: 3s
