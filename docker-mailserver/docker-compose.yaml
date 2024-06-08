@@ -49,12 +49,12 @@ services:
       - LDAP_SERVER_HOST=ldap://openldapDockerServer:3890
       - LDAP_BIND_DN=uid=admin,ou=people,dc=ventruetechnologies,dc=com
       - LDAP_START_TLS=no
-      - LDAP_SEARCH_BASE=dc=ventruetechnologies,dc=com
+      - LDAP_SEARCH_BASE=ou=people,dc=ventruetechnologies,dc=com
       - LDAP_BIND_PW=aNDREE1%
       - LDAP_QUERY_FILTER_USER=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
       - LDAP_QUERY_FILTER_GROUP=(&(objectClass=groupOfUniqueNames)(uid=%s))
       - LDAP_QUERY_FILTER_ALIAS=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
-      - LDAP_QUERY_FILTER_DOMAIN=((mail=*@%s))
+      - LDAP_QUERY_FILTER_DOMAIN=(mail=*@%s)
       # - LDAP_QUERY_FILTER_SENDERS=(|(mail=%s)(mail=admin@*))
       # <<< Postfix LDAP Integration
 
