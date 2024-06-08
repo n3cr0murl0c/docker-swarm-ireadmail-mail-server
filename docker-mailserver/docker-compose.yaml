@@ -125,8 +125,8 @@ services:
     image: roundcube/roundcubemail
     container_name: mailserver-webmail
     environment:
-      - ROUNDCUBEMAIL_DEFAULT_HOST=mailserver
-      - ROUNDCUBEMAIL_SMTP_SERVER=mailserver
+      - ROUNDCUBEMAIL_DEFAULT_HOST=ssl://mailserver
+      - ROUNDCUBEMAIL_SMTP_SERVER=ssl://mailserver
       - ROUNDCUBEMAIL_USERNAME_DOMAIN=ventruetechnologies.com
       - ROUNDCUBEMAIL_INSTALL_PLUGINS=true
       - ROUNDCUBEMAIL_UPLOAD_MAX_FILESIZE=25M
