@@ -26,14 +26,14 @@ services:
       - ENABLE_OPENDMARC=1
       - ENABLE_IMAP=1
       - ENABLE_CLAMAV=0
-      - ENABLE_RSPAMD=1
       - ENABLE_POLICYD_SPF=1
-      - ENABLE_RSPAMD_REDIS=1
       ##################RSPAMD#########################
-      - RSPAMD_LEARN=1
-      - RSPAMD_CHECK_AUTHENTICATED=1
-      - RSPAMD_GREYLISTING=1
-      - RSPAMD_HFILTER=1
+      - ENABLE_RSPAMD=0
+      - ENABLE_RSPAMD_REDIS=0
+      - RSPAMD_LEARN=0
+      - RSPAMD_CHECK_AUTHENTICATED=0
+      - RSPAMD_GREYLISTING=0
+      - RSPAMD_HFILTER=0
       - ENABLE_AMAVIS=0
       - ENABLE_DNSBL=0
       - ENABLE_FAIL2BAN=0
@@ -104,22 +104,25 @@ services:
     networks:
       mail-network:
 
-  openldapDockerServer-ui:
-    image: wheelybird/ldap-user-manager:v1.5
-    container_name: mailserver-ldap-ui
-    env_file:
-      - ./ldap/ldap-server.config
-     
-    depends_on:
-      - openldapDockerServer
-    ports:
-      - 18080:80
-      - 18443:443
-    networks:
-      mail-network:
-
       proxy:
         ipv4_address: 192.168.1.33
+
+  # openldapDockerServer-ui:
+  #   image: wheelybird/ldap-user-manager:v1.5
+  #   container_name: mailserver-ldap-ui
+  #   env_file:
+  #     - ./ldap/ldap-server.config
+     
+  #   depends_on:
+  #     - openldapDockerServer
+  #   ports:
+  #     - 18080:80
+  #     - 18443:443
+  #   networks:
+  #     mail-network:
+
+  #     proxy:
+  #       ipv4_address: 192.168.1.33
 
   roudcube:
     image: roundcube/roundcubemail
