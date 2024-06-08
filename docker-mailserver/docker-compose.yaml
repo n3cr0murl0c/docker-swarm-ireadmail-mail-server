@@ -2,11 +2,8 @@ services:
   mailserver:
     image: ghcr.io/docker-mailserver/docker-mailserver:latest
     container_name: mailserver
-    # Provide the FQDN of your mail server here (Your DNS MX record should point to this value)
     hostname: mail.ventruetechnologies.com
-    # env_file: mailserver.env
-    # More information about the mail-server ports:
-    # https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/
+    
     ports:
       - "25:25" # SMTP  (explicit TLS => STARTTLS, Authentication is DISABLED => use port 465/587 instead)
       - "143:143" # IMAP4 (explicit TLS => STARTTLS)
@@ -75,7 +72,6 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     stop_grace_period: 1m
-    # Uncomment if using `ENABLE_FAIL2BAN=1`:
     depends_on:
       - openldapDockerServer
     cap_add:
@@ -94,7 +90,7 @@ services:
     container_name: mailserver-ldap
     volumes:
       # - ./ldap/ldap_db:/var/lib/ldap
-      - ./lldap/data:/data"
+      - ./ldap/data:/data"
       - ./ldap/ldap_config:/etc/ldap/slapd.d
     environment:
       - VERBOSE=true
