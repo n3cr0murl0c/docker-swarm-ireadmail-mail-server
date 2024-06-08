@@ -48,7 +48,7 @@ services:
       - ACCOUNT_PROVISIONER=LDAP
       - LDAP_SERVER_HOST=ldap://openldapDockerServer:3890
       - LDAP_BIND_DN=uid=admin,ou=people,dc=ventruetechnologies,dc=com
-      - LDAP_START_TLS=yes
+      - LDAP_START_TLS=no
       - LDAP_SEARCH_BASE=dc=ventruetechnologies,dc=com
       - LDAP_BIND_PW=aNDREE1%
       - LDAP_QUERY_FILTER_USER=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
