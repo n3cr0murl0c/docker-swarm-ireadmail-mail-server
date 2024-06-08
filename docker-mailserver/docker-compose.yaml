@@ -134,6 +134,7 @@ services:
     environment:
       - ROUNDCUBEMAIL_DEFAULT_HOST=ssl://mailserver
       - ROUNDCUBEMAIL_SMTP_SERVER=ssl://mailserver
+      - ROUNDCUBEMAIL_DEFAULT_PORT=993
       - ROUNDCUBEMAIL_USERNAME_DOMAIN=ventruetechnologies.com
       - ROUNDCUBEMAIL_INSTALL_PLUGINS=true
       - ROUNDCUBEMAIL_UPLOAD_MAX_FILESIZE=25M
