@@ -4,7 +4,7 @@ services:
     container_name: mailserver
     # Provide the FQDN of your mail server here (Your DNS MX record should point to this value)
     hostname: mail.ventruetechnologies.com
-    env_file: mailserver.env
+    # env_file: mailserver.env
     # More information about the mail-server ports:
     # https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/
     ports:
@@ -14,22 +14,58 @@ services:
       - "587:587" # ESMTP (explicit TLS => STARTTLS)
       - "993:993" # IMAP4 (implicit TLS)
     environment:
-      - SSL_TYPE=letsencrypt
-      - LDAP_START_TLS=yes
-      - ACCOUNT_PROVISIONER=LDAP
-      - LDAP_SERVER_HOST=ldap://openldapDockerServer
-      - LDAP_SEARCH_BASE=dc=ventruetechnologies,dc=com
-      - LDAP_BIND_DN=cn=admin,dc=ventruetechnologies,dc=com
-      - LDAP_BIND_PW=@nDREE170702
+      - OVERRIDE_HOSTNAME=
+      - DMS_DEBUG=0
+      - LOG_LEVEL=debug
+      - SUPERVISOR_LOGLEVEL=debug
+      - ENABLE_UPDATE_CHECK=1
+      - UPDATE_CHECK_INTERVAL=1d
+      - PERMIT_DOCKER=none
+      - TZ='America/Guayaquil'
+      - TLS_LEVEL=intermediate
       - SPOOF_PROTECTION=1
-      - LDAP_QUERY_FILTER_DOMAIN=(mail=*@%s)
-      - LDAP_QUERY_FILTER_USER=(mail=%s)
-      - LDAP_QUERY_FILTER_ALIAS=(|) # doesn't match anything
-      - LDAP_QUERY_FILTER_GROUP=(|) # doesn't match anything
-      - LDAP_QUERY_FILTER_SENDERS=(|(mail=%s)(mail=admin@*))
-      - DOVECOT_USER_ATTRS=mailHomeDirectory=home,mailUidNumber=uid,mailGidNumber=gid,mailStorageDirectory=mail
-      - DOVECOT_PASS_ATTRS=uniqueIdentifier=user,userPassword=password
-      - DOVECOT_USER_FILTER=(&(objectClass=PostfixBookMailAccount)(uniqueIdentifier=%n))
+      - ENABLE_SRS=0
+      - ENABLE_OPENDKIM=1
+      - ENABLE_OPENDMARC=1
+      - ENABLE_IMAP=1
+      - ENABLE_CLAMAV=0
+      - ENABLE_RSPAMD=1
+      - ENABLE_POLICYD_SPF=1
+      - ENABLE_RSPAMD_REDIS=1
+      ##################RSPAMD#########################
+      - RSPAMD_LEARN=1
+      - RSPAMD_CHECK_AUTHENTICATED=1
+      - RSPAMD_GREYLISTING=1
+      - RSPAMD_HFILTER=1
+      - ENABLE_AMAVIS=0
+      - ENABLE_DNSBL=0
+      - ENABLE_FAIL2BAN=0
+      - ENABLE_SPAMASSASSIN=1
+      - ENABLE_SPAMASSASSIN_KAM=1
+      - MOVE_SPAM_TO_JUNK=1
+      - SPAMASSASSIN_SPAM_TO_INBOX=1
+      - FAIL2BAN_BLOCKTYPE=drop
+      - SSL_TYPE=letsencrypt
+      
+      # >>> Postfix LDAP Integration
+      - ACCOUNT_PROVISIONER=LDAP
+      - LDAP_SERVER_HOST=ldap://openldapDockerServer:3890
+      - LDAP_BIND_DN=uid=admin,ou=people,dc=ventruetechnologies,dc=com
+      - LDAP_START_TLS=yes
+      - LDAP_SEARCH_BASE=dc=ventruetechnologies,dc=com
+      - LDAP_BIND_PW=aNDREE1%
+      - LDAP_QUERY_FILTER_USER=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
+      - LDAP_QUERY_FILTER_GROUP=(&(objectClass=groupOfUniqueNames)(uid=%s))
+      - LDAP_QUERY_FILTER_ALIAS=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
+      - LDAP_QUERY_FILTER_DOMAIN=((mail=*@%s))
+      # - LDAP_QUERY_FILTER_SENDERS=(|(mail=%s)(mail=admin@*))
+      # <<< Postfix LDAP Integration
+
+      # >>> Dovecot LDAP Integration
+      - DOVECOT_AUTH_BIND=yes
+      - DOVECOT_USER_FILTER=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
+      - DOVECOT_USER_ATTRS==uid=5000,=gid=5000,=home=/var/mail/%Ln,=mail=maildir:~/Maildir
+      - POSTMASTER_ADDRESS=postmaster@ventruetechnologies.com
     volumes:
       - ./dms/certbot/certs/:/etc/letsencrypt
       - ./dms/mail-data/:/var/mail/
@@ -43,6 +79,7 @@ services:
     depends_on:
       - openldapDockerServer
     cap_add:
+      - SYS_PTRACE
       - NET_ADMIN
     healthcheck:
       test: "ss --listening --tcp | grep -P 'LISTEN.+:smtp' || exit 1"
@@ -52,14 +89,22 @@ services:
       mail-network:
 
   openldapDockerServer:
-    image: osixia/openldap:latest
+    # image: osixia/openldap:latest
+    image: lldap/lldap:stable
     container_name: mailserver-ldap
     volumes:
-      - ./ldap/ldap_db:/var/lib/ldap
+      # - ./ldap/ldap_db:/var/lib/ldap
+      - ./lldap/data:/data"
       - ./ldap/ldap_config:/etc/ldap/slapd.d
-    env_file:
-      - ./ldap/ldap-server.config
-      
+    environment:
+      - VERBOSE=true
+      - TZ='America/Guayaquil'
+      - LLDAP_JWT_SECRET=aA9M2u7WO2OHW/Pu5ySo1EIIDrsW0RTvDKdKUKgVUJ8=
+      - LLDAP_LDAP_USER_PASS=aNDREE1%
+      - LLDAP_LDAP_BASE_DN=dc=ventruetechnologies,dc=com
+    ports:
+      - "3890:3890"
+      - "17170:17170"
     networks:
       mail-network:
 
