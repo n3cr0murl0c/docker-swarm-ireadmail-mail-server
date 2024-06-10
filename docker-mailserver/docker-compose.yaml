@@ -132,8 +132,8 @@ services:
     image: roundcube/roundcubemail
     container_name: mailserver-webmail
     environment:
-      - ROUNDCUBEMAIL_DEFAULT_HOST=ssl://mailserver
-      - ROUNDCUBEMAIL_SMTP_SERVER=ssl://mailserver
+      - ROUNDCUBEMAIL_DEFAULT_HOST=tls://mailserver
+      - ROUNDCUBEMAIL_SMTP_SERVER=tls://mailserver
       - ROUNDCUBEMAIL_DEFAULT_PORT=993
       - ROUNDCUBEMAIL_USERNAME_DOMAIN=ventruetechnologies.com
       - ROUNDCUBEMAIL_INSTALL_PLUGINS=true
