@@ -64,19 +64,19 @@ services:
       - DOVECOT_USER_ATTRS==uid=5000,=gid=5000,=home=/var/mail/%Ln,=mail=maildir:~/Maildir
       - POSTMASTER_ADDRESS=postmaster@ventruetechnologies.com
     volumes:
-      - dms-certbot-certs:/etc/letsencrypt
-      - dms-mail-data:/var/mail/
-      - dms-mail-state:/var/mail-state/
-      - dms-mail-logs:/var/log/mail/
-      - dms-config:/tmp/docker-mailserver/
-      
+      - ./dms/certbot/certs/:/etc/letsencrypt
+      - ./dms/mail-data/:/var/mail/
+      - ./dms/mail-state/:/var/mail-state/
+      - ./dms/mail-logs/:/var/log/mail/
+      - ./dms/config/:/tmp/docker-mailserver/
+      - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     stop_grace_period: 1m
     depends_on:
       - openldapDockerServer
     cap_add:
       - SYS_PTRACE
-      # - NET_ADMIN
+      - NET_ADMIN
     healthcheck:
       test: "ss --listening --tcp | grep -P 'LISTEN.+:smtp' || exit 1"
       timeout: 3s
@@ -85,13 +85,13 @@ services:
       mail-network:
 
   openldapDockerServer:
-    
+    # image: osixia/openldap:latest
     image: lldap/lldap:stable
     container_name: mailserver-ldap
     volumes:
-      
-      - ldap-data:/data"
-      - ldap-ldap_config:/etc/ldap/slapd.d
+      # - ./ldap/ldap_db:/var/lib/ldap
+      - ./ldap/data:/data"
+      - ./ldap/ldap_config:/etc/ldap/slapd.d
     environment:
       - VERBOSE=true
       - TZ='America/Guayaquil'
@@ -108,8 +108,8 @@ services:
     networks:
       mail-network:
 
-      # proxy:
-      #   ipv4_address: 192.168.1.33
+      proxy:
+        ipv4_address: 192.168.1.33
 
   roudcube:
     image: roundcube/roundcubemail
@@ -134,8 +134,8 @@ services:
     networks:
       mail-network:
 
-      # proxy:
-      #   ipv4_address: 192.168.1.34
+      proxy:
+        ipv4_address: 192.168.1.34
 
   mailserverdB:
     image: postgres:latest
@@ -147,9 +147,8 @@ services:
       mail-network:
       #Para poner la TZ acorde al host
     volumes:
-    - ldap-postgres:/var/lib/postgresql/
-    #   - /etc/timezone:/etc/timezone:ro
-    #   - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
     environment:
       TZ: America/Guayaquil
       POSTGRES_USER: postgres
@@ -159,14 +158,5 @@ services:
 networks:
   mail-network:
     name: mailserver-network
-  # proxy:
-  #   external: true
-volumes:
-  ldap-data:
-  ldap-ldap_config:
-  ldap-postgres:
-  dms-config:
-  dms-mail-logs:
-  dms-mail-state:
-  dms-mail-data:
-  dms-certbot-certs:
+  proxy:
+    external: true
