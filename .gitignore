@@ -5,3 +5,4 @@
 **/sa_rules/*
 **/ssl/*
 /config/*
+**/certs/*

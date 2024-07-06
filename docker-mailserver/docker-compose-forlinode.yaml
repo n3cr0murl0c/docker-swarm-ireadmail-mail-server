@@ -2,7 +2,7 @@ services:
   mailserver:
     image: ghcr.io/docker-mailserver/docker-mailserver:latest
     container_name: mailserver
-    hostname: mail.ventruetechnologies.com
+    hostname: mail.domain.com
     
     ports:
       - "25:25" # SMTP  (explicit TLS => STARTTLS, Authentication is DISABLED => use port 465/587 instead)
@@ -47,10 +47,10 @@ services:
       # >>> Postfix LDAP Integration
       - ACCOUNT_PROVISIONER=LDAP
       - LDAP_SERVER_HOST=ldap://openldapDockerServer:3890
-      - LDAP_BIND_DN=uid=admin,ou=people,dc=ventruetechnologies,dc=com
+      - LDAP_BIND_DN=uid=admin,ou=people,dc=domain,dc=com
       - LDAP_START_TLS=no
-      - LDAP_SEARCH_BASE=ou=people,dc=ventruetechnologies,dc=com
-      - LDAP_BIND_PW=aNDREE1%
+      - LDAP_SEARCH_BASE=ou=people,dc=domain,dc=com
+      - LDAP_BIND_PW=password-changeme
       - LDAP_QUERY_FILTER_USER=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
       - LDAP_QUERY_FILTER_GROUP=(&(objectClass=groupOfUniqueNames)(uid=%s))
       - LDAP_QUERY_FILTER_ALIAS=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
@@ -62,7 +62,7 @@ services:
       - DOVECOT_AUTH_BIND=yes
       - DOVECOT_USER_FILTER=(&(objectClass=inetOrgPerson)(|(uid=%u)(mail=%u)))
       - DOVECOT_USER_ATTRS==uid=5000,=gid=5000,=home=/var/mail/%Ln,=mail=maildir:~/Maildir
-      - POSTMASTER_ADDRESS=postmaster@ventruetechnologies.com
+      - POSTMASTER_ADDRESS=postmaster@domain.com
     volumes:
       - ./dms/certbot/certs/:/etc/letsencrypt
       - ./dms/mail-data/:/var/mail/
@@ -95,9 +95,9 @@ services:
     environment:
       - VERBOSE=true
       - TZ='America/Guayaquil'
-      - LLDAP_JWT_SECRET=aA9M2u7WO2OHW/Pu5ySo1EIIDrsW0RTvDKdKUKgVUJ8=
-      - LLDAP_LDAP_USER_PASS=aNDREE1%
-      - LLDAP_LDAP_BASE_DN=dc=ventruetechnologies,dc=com
+      - LLDAP_JWT_SECRET=please-generate-a-sacret
+      - LLDAP_LDAP_USER_PASS=password-changeme
+      - LLDAP_LDAP_BASE_DN=dc=domain,dc=com
     ports:
       # For LDAP, not recommended to expose, see Usage section.
       #- "3890:3890"
@@ -118,13 +118,13 @@ services:
       - ROUNDCUBEMAIL_DEFAULT_HOST=tls://mailserver
       - ROUNDCUBEMAIL_SMTP_SERVER=tls://mailserver
       - ROUNDCUBEMAIL_DEFAULT_PORT=993
-      - ROUNDCUBEMAIL_USERNAME_DOMAIN=ventruetechnologies.com
+      - ROUNDCUBEMAIL_USERNAME_DOMAIN=domain.com
       - ROUNDCUBEMAIL_INSTALL_PLUGINS=true
       - ROUNDCUBEMAIL_UPLOAD_MAX_FILESIZE=25M
       - ROUNDCUBEMAIL_DB_TYPE=pgsql
       - ROUNDCUBEMAIL_DB_HOST=mailserverPostgres
       - ROUNDCUBEMAIL_DB_USER=postgres
-      - ROUNDCUBEMAIL_DB_PASSWORD=aNDREE170702
+      - ROUNDCUBEMAIL_DB_PASSWORD=password-changeme
       - ROUNDCUBEMAIL_DB_NAME=mailserver-db
     ports:
       - 80:80
@@ -152,7 +152,7 @@ services:
     environment:
       TZ: America/Guayaquil
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: aNDREE170702
+      POSTGRES_PASSWORD: password-changeme
       POSTGRES_DB: mailserver-db
 
 networks:
