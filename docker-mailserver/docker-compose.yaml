@@ -14,7 +14,7 @@ services:
       - .env
 
     volumes:
-      - letsencrypt:/etc/letsencrypt:ro
+      - nginxproxyshield_letsencrypt:/etc/letsencrypt:ro
       - ./dms/mail-data:/var/mail/
       - ./dms/mail-state:/var/mail-state/
       - ./dms/mail-logs:/var/log/mail/
@@ -95,7 +95,7 @@ networks:
   proxy:
     external: true
 volumes:
-  letsencrypt:
+  nginxproxyshield_letsencrypt:
     external: true
   ldap-data:
   ldap-ldap_config:
