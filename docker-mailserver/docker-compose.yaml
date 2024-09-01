@@ -14,7 +14,7 @@ services:
       - .env
 
     volumes:
-      - ./dms/certbot/certs:/etc/letsencrypt/:rw
+      - ./dms/certbot/certs/:/etc/letsencrypt/:rw
       - ./dms/mail-data:/var/mail/
       - ./dms/mail-state:/var/mail-state/
       - ./dms/mail-logs:/var/log/mail/
