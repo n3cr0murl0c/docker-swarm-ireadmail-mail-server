@@ -14,7 +14,7 @@ services:
       - .env
 
     volumes:
-      - ./dms/certbot/certs/:/etc/letsencrypt/:rw
+      - letsencrypt:/etc/letsencrypt:ro
       - ./dms/mail-data:/var/mail/
       - ./dms/mail-state:/var/mail-state/
       - ./dms/mail-logs:/var/log/mail/
@@ -95,6 +95,8 @@ networks:
   proxy:
     external: true
 volumes:
+  letsencrypt:
+    external: true
   ldap-data:
   ldap-ldap_config:
   ldap-postgres:
