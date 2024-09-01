@@ -92,8 +92,8 @@ services:
 networks:
   mail-network:
     name: mailserver-network
-  # proxy:
-  #   external: true
+  proxy:
+    external: true
 volumes:
   ldap-data:
   ldap-ldap_config:
