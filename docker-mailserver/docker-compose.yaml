@@ -14,11 +14,11 @@ services:
       - .env
 
     volumes:
-      - dms-certbot-certs:/etc/letsencrypt
-      - dms-mail-data:/var/mail/
-      - dms-mail-state:/var/mail-state/
-      - dms-mail-logs:/var/log/mail/
-      - dms-config:/tmp/docker-mailserver/
+      - ./dms/certbot/certs:/etc/letsencrypt/:rw
+      - ./dms/mail-data:/var/mail/
+      - ./dms/mail-state:/var/mail-state/
+      - ./dms/mail-logs:/var/log/mail/
+      - ./dms/config:/tmp/docker-mailserver/
 
     restart: unless-stopped
     stop_grace_period: 1m
@@ -62,7 +62,7 @@ services:
     env_file:
       - .env
     ports:
-      - 80:80
+      - 8099:80
     depends_on:
       - mailserver
       - mailserverdB
@@ -97,8 +97,3 @@ volumes:
   ldap-data:
   ldap-ldap_config:
   ldap-postgres:
-  dms-config:
-  dms-mail-logs:
-  dms-mail-state:
-  dms-mail-data:
-  dms-certbot-certs:
